@@ -3,7 +3,14 @@
 
 
 def gcd(a, b):
-    pass
+    while (b != 0):
+        remainder = a % b
+        if remainder == 0:
+            return b
+        else:
+            a = b
+            b = remainder    
+
     
         
 # try out the function with a few examples
