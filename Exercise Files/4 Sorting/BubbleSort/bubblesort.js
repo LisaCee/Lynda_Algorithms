@@ -6,8 +6,8 @@ const bubbleSort = dataset => {
                 dataset[j] = dataset[j + 1];
                 dataset[j + 1] = temp;
             }
-    
-        } console.log('Current state: ', dataset);
+            console.log('Current state: ', dataset); 
+        } 
     }
 }
 
