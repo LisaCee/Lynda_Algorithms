@@ -24,11 +24,10 @@ def mergesort(dataset):
             if leftarr[i] < rightarr[j]:
                 dataset[k] = leftarr[i]
                 i += 1
-            else:
+            else:    
                 dataset[k] = rightarr[j]
                 j += 1
             k += 1
-
         # TODO: if the left array still has values, add them
         while i < len(leftarr):
             dataset[k] = leftarr[i]
@@ -40,7 +39,6 @@ def mergesort(dataset):
             dataset[k] = rightarr[j]
             j += 1
             k += 1
-
 
 # test the merge sort with data
 print(items)
