@@ -12,15 +12,18 @@ def binarysearch(item, itemlist):
     upperIdx = listsize
 
     while lowerIdx <= upperIdx:
-        pass
+        
         # TODO: calculate the middle point
-
-
+        mid = (lowerIdx + upperIdx) // 2
         # TODO: if item is found, return the index
-
+        if itemlist[mid] == item:
+            return mid
 
         # TODO: otherwise get the next midpoint
-
+        if item > itemlist[mid]:
+            lowerIdx = mid + 1
+        else: 
+            upperIdx = mid - 1
 
     if lowerIdx > upperIdx:
         return None
