@@ -21,18 +21,20 @@ const partition = (datavalues, first, last) => {
         }
     }
     console.log(datavalues)
-    temp = datavalues[first];
+    let temp2 = datavalues[first];
     datavalues[first] = datavalues[upper];
-    datavalues[upper] = temp;
+    datavalues[upper] = temp2;
 
     return upper;
 }
 const quickSort = (dataset, first, last) => {
     if (first < last) {
-        pivotIndex = partition(dataset, first, last)
-        quickSort(dataset, first, pivotIndex--);
-        quickSort(dataset, pivotIndex++, last)
+        let pivotIndex = partition(dataset, first, last);
+        let left = ++pivotIndex;
+        quickSort(dataset, first, --pivotIndex);
+        quickSort(dataset, left, last)
     }
+    return dataset;
 }
 
 
